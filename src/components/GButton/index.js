@@ -1,7 +1,7 @@
 import {ButtonContainer} from "./styles"
 import {GoogleLogin, GoogleOAuthProvider,} from "@react-oauth/google";
 
-const clientId = "180197040960-mn2qvk9baomeujjuqlsefg6kvjurb5rv.apps.googleusercontent.com"
+const clientId = process.env.REACT_APP_CLIENT_ID
 export const GButton = () => {
     const onSuccess = (res) => {
         console.log("Login success! Current user: ", res)

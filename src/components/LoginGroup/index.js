@@ -4,7 +4,8 @@ import {Button} from "../Button";
 import {GButton} from "../GButton";
 import {useEffect} from "react";
 import {gapi} from "gapi-script";
-const clientId = "180197040960-mn2qvk9baomeujjuqlsefg6kvjurb5rv.apps.googleusercontent.com"
+import CLIENT_ID from "../..//"
+const clientId = process.env.REACT_APP_CLIENT_ID
 export const LoginGroup = () => {
     useEffect(() => {
         function start() {
