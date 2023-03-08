@@ -1,27 +1,22 @@
 import {ButtonContainer} from "./styles"
-import {GoogleLogin, GoogleOAuthProvider,} from "@react-oauth/google";
+import {GoogleLogin} from "@react-oauth/google";
+import jwt_decode from "jwt-decode";
 
-const clientId = process.env.REACT_APP_CLIENT_ID
 export const GButton = () => {
-    const onSuccess = (res) => {
-        console.log("Login success! Current user: ", res)
-    }
-
-    const onFailure = (res) => {
-        console.log("Login failed! res: ", res)
-    }
 
     return (
         <ButtonContainer>
-            <GoogleOAuthProvider clientId={clientId}>
-                <GoogleLogin
-                    shape={"pill"}
-                    width={"360px"}
-                    onSuccess={onSuccess}
-                    onFailure={onFailure}
-                    cookiePolicy={'single_host_origin'}
-                />
-            </GoogleOAuthProvider>
+            <GoogleLogin
+                onSuccess={credentialResponse => {
+                    console.log(credentialResponse);
+                    let decoded = jwt_decode(credentialResponse.credential);
+                    console.log(decoded)
+                }}
+                onError={() => {
+                    console.log('Login Failed');
+                }}
+                useOneTap
+            />
         </ButtonContainer>
     )
 }

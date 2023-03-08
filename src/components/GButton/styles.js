@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-export const ButtonContainer = styled.div`  box-sizing: border-box;
+export const ButtonContainer = styled.div`  
+  box-sizing: border-box;
   width: 70%;
   height: auto;
   border-radius: 8px;
@@ -8,5 +9,5 @@ export const ButtonContainer = styled.div`  box-sizing: border-box;
   margin: 10vh 0;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
 `
