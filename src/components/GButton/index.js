@@ -15,8 +15,6 @@ export const GButton = () => {
         <ButtonContainer>
             <GoogleOAuthProvider clientId={clientId}>
                 <GoogleLogin
-                    text={"signin"}
-                    type={"standard"}
                     shape={"pill"}
                     width={"360px"}
                     onSuccess={onSuccess}
