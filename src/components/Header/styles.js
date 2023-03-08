@@ -28,8 +28,6 @@ export const Logo = styled.img.attrs({
 `;
 
 export const Title = styled.h1`
-    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
-    font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 32px;
@@ -57,6 +55,7 @@ export const RegisterButton = styled.button`
     outline-color: #95E11F;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+  
     &:hover {
         background-color: #95E11F;
         color: #345204;
@@ -78,6 +77,7 @@ export const LoginButton = styled.button`
     outline-color: #95E11F;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+  
     &:hover {
         background-color: #345204;
         color: #95E11F;

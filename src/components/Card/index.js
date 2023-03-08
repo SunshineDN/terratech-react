@@ -1,9 +1,9 @@
-import React from 'react';
+import {Container, Title} from "./styles"
 
-const Card = () => {
+export const Card = ({title}) => {
     return (
-        <div>Card</div>
-    )
+        <Container>
+            <Title>{title}</Title>
+        </Container>
+    );
 }
-
-export default Card

@@ -1,9 +1,8 @@
 import React from 'react';
+import {LoginButton} from "./styles"
 
-const Button = () => {
+export const Button = ({value}) => {
     return (
-        <div>Button</div>
-    )
+        <LoginButton>{value}</LoginButton>
+    );
 }
-
-export default Button

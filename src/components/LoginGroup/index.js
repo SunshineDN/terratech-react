@@ -1,22 +1,14 @@
-import React from 'react';
-import { Container, Title, InputBox, Input, InputLabel, LoginButton } from './styles'
-
-const LoginGroup = () => {
+import { Container, Title} from './styles'
+import {Input} from "../Input";
+import {Button} from "../Button";
+export const LoginGroup = () => {
     const title = "Área de Login";
     return (
         <Container>
             <Title>{title}</Title>
-            <InputBox>
-                <Input />
-                <InputLabel>Email</InputLabel>
-            </InputBox>
-            <InputBox>
-                <Input />
-                <InputLabel>Senha</InputLabel>
-            </InputBox>
-            <LoginButton>Login</LoginButton>
+            <Input label={"Email"}/>
+            <Input label={"Senha"}/>
+            <Button value={"Login"}/>
         </Container>
     )
 }
-
-export default LoginGroup

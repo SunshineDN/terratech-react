@@ -1,15 +1,21 @@
-import './App.css';
-import Header from './components/Header';
-import LoginGroup from './components/LoginGroup';
-import { GlobalStyle } from './globalStyles/styles';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import {Home} from "./pages/home";
+import {Login} from "./pages/login";
+import {Cadastro} from "./pages/cadastro";
 
 function App() {
   return (
-    <>
-      <GlobalStyle />
-      <Header />
-      <LoginGroup />
-    </>
+      <Router >
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/cadastro" element={<Cadastro />} />
+        </Routes>
+      </Router>
   );
 }
 

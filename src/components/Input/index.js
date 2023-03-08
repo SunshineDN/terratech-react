@@ -1,10 +1,11 @@
 import React from "react";
-import {InputContainer, InputText} from "./styles";
+import {InputText, InputBox, InputLabel} from "./styles";
 
-export const Input = () => {
+export const Input = ({label}) => {
     return (
-        <InputContainer>
+        <InputBox>
             <InputText />
-        </InputContainer>
+            <InputLabel>{label}</InputLabel>
+        </InputBox>
     )
-}
+};
