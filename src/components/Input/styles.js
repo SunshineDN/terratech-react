@@ -8,7 +8,10 @@ export const InputBox = styled.div`
   width: 70%;
 `;
 
-export const InputText = styled.input`
+export const InputText = styled.input.attrs({
+  type: "text",
+  required: true,
+})`
   font-style: normal;
   font-size: 22px;
   font-weight: 600;
@@ -37,7 +40,7 @@ export const InputLabel = styled.label`
     top: 50%;
     transform: translateY(-50%);
     transition: .5s;
-  ${InputText}:focus ~ &{
+  ${InputText}:focus ~ &, ${InputText}:valid ~ &{
     top: -5px;
   }
 `;
