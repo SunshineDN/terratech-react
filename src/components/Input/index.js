@@ -1,19 +1,12 @@
-import {InputText, InputBox, InputLabel, ErrorContainer} from "./styles";
-import {Controller} from "react-hook-form";
+import React, {useState} from "react";
+import {InputText, InputBox, InputLabel} from "./styles";
 
-export const Input = ({label, type, onChange, control, name, errorMessage, ...rest}) => {
+export const Input = ({label, type, onChange}) => {
+
     return (
         <InputBox>
-
-            <Controller render={({field: {onChange, onBlur, value, ref}}) => (
-                <InputText {...rest} onChange={onChange}
-                           onBlur={onBlur} value={value}
-                           ref={ref} type={type}/>)}
-                        control={control}
-                        name={name}
-            />
+            <InputText type={type} onChange={onChange}/>
             <InputLabel >{label}</InputLabel>
-            {errorMessage ? <ErrorContainer>{errorMessage}</ErrorContainer> : null}
         </InputBox>
     )
 };
