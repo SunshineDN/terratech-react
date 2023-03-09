@@ -2,11 +2,12 @@ import {Container, H1, H3} from './styles'
 import {Input} from "../Input";
 import {Button} from "../Button";
 import {GButton} from "../GButton";
-import {useGoogleLogin} from "@react-oauth/google";
+import { Formik } from "formik";
+import * as EmailValidator from "email-validator";
+import * as Yup from "yup";
+
 
 export const LoginGroup = () => {
-
-
     const title = "Área de Login";
     return (
         <Container>

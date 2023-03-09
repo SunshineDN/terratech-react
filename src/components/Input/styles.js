@@ -43,3 +43,6 @@ export const InputLabel = styled.label`
   }
 `;
 
+export const ErrorContainer = styled.p`
+  color: red;
+`
