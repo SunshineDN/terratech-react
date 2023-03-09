@@ -16,9 +16,7 @@ export const Container = styled.form.attrs({
   padding: 36px 0;
 `;
 
-export const Title = styled.h1`
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
-  font-family: 'Nunito';
+export const H1 = styled.h1`
   font-style: normal;
   font-weight: 600;
   font-size: 46px;
@@ -27,3 +25,13 @@ export const Title = styled.h1`
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 36px;
 `;
+
+export const H3 = styled.h3`
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+  color: #F1F1E8;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 42px 0;
+`

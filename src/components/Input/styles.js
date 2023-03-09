@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const InputBox = styled.div`
-  border-bottom: 2px solid #F1F1E8;
+  border-bottom: 2px solid #CDCDC5FF;
   height: 47px;
   margin-bottom: 50px;
   position: relative;
@@ -9,14 +9,12 @@ export const InputBox = styled.div`
 `;
 
 export const InputText = styled.input.attrs({
-  type: "text",
   required: true,
 })`
   font-style: normal;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 300;
   border: none;
-  border-bottom: 2px solid #F1F1E8;
   height: 47px;
   background-color: transparent;
   border: none;
@@ -25,13 +23,13 @@ export const InputText = styled.input.attrs({
   outline: none;
   padding: 0 6px;
   width: 100%;
-  
-  
+
+
 `;
 
 export const InputLabel = styled.label`
     font-style: normal;
-    color: #F1F1E8;
+    color: #CDCDC5FF;
     font-size: 22px;
     font-weight: 600;
     left: 5px;
