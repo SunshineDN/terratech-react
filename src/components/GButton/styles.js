@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ButtonContainer = styled.div`  
+export const ButtonContainer = styled.div`
   box-sizing: border-box;
   width: 70%;
   height: auto;
@@ -27,8 +27,13 @@ export const ButtonText = styled.button`
   cursor: pointer;
 `
 export const IconContainer = styled.div`
-display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin-left: 12px;
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
 `

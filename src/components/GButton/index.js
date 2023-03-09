@@ -1,6 +1,6 @@
 import {ButtonContainer, ButtonText, IconContainer} from "./styles"
 import { useGoogleLogin } from '@react-oauth/google';
-import icon from "../../assets/images/icons8-google-32.png"
+import icon from "../../assets/images/icons8-google-logo.svg"
 export const GButton = () => {
 
     const login = useGoogleLogin({
