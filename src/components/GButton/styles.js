@@ -1,34 +1,30 @@
 import styled from "styled-components";
 
-export const ButtonContainer = styled.div`  
-  box-sizing: border-box;
-  width: 70%;
-  height: auto;
-  border-radius: 12px;
-  cursor: pointer;
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.168);
-  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.084);
-  display: flex;
-  align-items: center;
-`
+export const Image = styled.img`
+  margin: 0 17% 0 8%;
+`;
 
 export const ButtonText = styled.button`
+  box-sizing: border-box;
   width: 70%;
-  height: 40px;
-  border: none;
-  background: rgba(255, 255, 255, 1);
+  height: 47.5px;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   text-align: center;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 14px;
-  line-height: 16px;
-  color: black;
-  cursor: pointer;
+  
+  background: rgba(255, 255, 255, 1);
+  border: 2px solid #2C3333;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  color: #2C3333;
 `
-export const IconContainer = styled.div`
-display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 12px;
-`
+
+export const GoogleSpan = styled.span`
+  font-weight: 700;
+  padding-left: 4px;
+`;

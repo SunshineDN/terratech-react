@@ -1,6 +1,6 @@
-import {ButtonContainer, ButtonText, IconContainer} from "./styles"
+import { ButtonText, GoogleSpan, Image } from "./styles"
 import { useGoogleLogin } from '@react-oauth/google';
-import icon from "../../assets/images/icons8-google-32.png"
+import icon from "../../assets/images/Icon Google.svg"
 export const GButton = () => {
 
     const login = useGoogleLogin({
@@ -9,12 +9,9 @@ export const GButton = () => {
     });
 
     return (
-        <ButtonContainer >
-            <IconContainer>
-                <img src={icon} alt={'google logo'}/>
-            </IconContainer>
-            <ButtonText onClick={login}>{"Fazer login com Google"}</ButtonText>
-
-        </ButtonContainer>
+        <ButtonText onClick={login}>
+            <Image src={icon} alt={'Google Logo'} />
+            {"Continuar com"}<GoogleSpan>{"Google"}</GoogleSpan>
+        </ButtonText>
     )
 }
