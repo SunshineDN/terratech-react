@@ -7,7 +7,7 @@ export const Container = styled.form.attrs({
   background-color: #474F38;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 112px auto 0 auto;
   max-width: 520px;
   border: 3px solid #BABABA;
   box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);

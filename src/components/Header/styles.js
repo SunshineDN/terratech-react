@@ -3,14 +3,13 @@ import logo from "../../assets/images/logo.png";
 
 export const HeaderContainer = styled.header`
     padding: 0px 3% 0 3%;
-    width: 100vw;
+    width: 100%;
     height: 10%;
     background: #95E11F;
     box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 112px;
     flex-wrap: wrap;
 `;
 
