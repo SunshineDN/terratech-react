@@ -17,8 +17,8 @@ export const LoginGroup = () => {
     return (
         <Container>
             <H1>{title}</H1>
-            <Input type={"email"} label={"Email"}/>
-            <Input type={"password"} label={"Senha"} />
+            <Input label={"Email"}/>
+            <Input label={"Senha"} />
             <Button value={"Login"}/>
             <H3>{"OU"}</H3>
             <GButton />
