@@ -1,8 +1,10 @@
-import {Container,H1} from "./styles"
+import {H1} from "./styles"
+import { Header } from "../../components/Header";
 export const Cadastro = () => {
     return (
-        <Container>
-            <H1>{"NAO TEM NADA AINDA"}</H1>
-        </Container>
+        <>
+            <Header />
+            <H1>CADASTRO</H1>
+        </>
     );
 }

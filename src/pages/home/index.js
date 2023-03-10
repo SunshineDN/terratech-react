@@ -1,8 +1,11 @@
-import {Container, H1} from "./styles"
+import {H1} from "./styles"
+import { Header } from "../../components/Header";
+
 export const Home = () => {
     return (
-        <Container>
-            <H1>{"TENTA MUDAR PRA /LOGIN NA URL ↑"}</H1>
-        </Container>
+        <>
+            <Header />
+            <H1>HOME</H1>
+        </>
     );
 }
