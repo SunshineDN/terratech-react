@@ -1,8 +1,8 @@
 import React from 'react';
 import {LoginButton} from "./styles"
 
-export const Button = ({value, type}) => {
+export const Button = ({value, type, onClick}) => {
     return (
-        <LoginButton type={type}>{value}</LoginButton>
+        <LoginButton type={type} onClick={onClick}>{value}</LoginButton>
     );
 }
