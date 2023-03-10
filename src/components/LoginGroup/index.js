@@ -17,7 +17,6 @@ export const LoginGroup = () => {
         try {
             const response = await api.post("/users/login", { email, password });
             if (response.status === 200) {
-                console.log(response.data)
                 navigate("/home")
             } else {
                 setError(response.data.message)
