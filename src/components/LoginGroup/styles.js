@@ -33,3 +33,11 @@ export const H3 = styled.h3`
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 42px 0;
 `
+
+export const ErrorMessage = styled.p`
+  font-style: normal;
+  font-weight: 400;
+  text-wrap: normal;
+  margin-bottom: 30px;
+  color: red;
+`
