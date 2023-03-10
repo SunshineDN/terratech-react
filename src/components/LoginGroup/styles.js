@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.form.attrs({
-    action: "#",
-})`
+export const Container = styled.form`
   box-sizing: border-box;
   background-color: #474F38;
   display: flex;
