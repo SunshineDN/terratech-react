@@ -5,7 +5,7 @@ export const Container = styled.form`
   background-color: #474F38;
   display: flex;
   flex-direction: column;
-  margin: 112px auto 0 auto;
+  margin: ${props => props.msg ? "35px auto 0 auto" : "112px auto 0 auto"};
   max-width: 520px;
   border: 3px solid #BABABA;
   box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
@@ -34,10 +34,37 @@ export const H3 = styled.h3`
   margin: 42px 0;
 `
 
+
+export const ErrorContainer = styled.div`
+  box-sizing: border-box;
+  margin: 40px auto 0 auto;
+  border: 2px solid #e8b4b4;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 520px;
+  padding: 30px 0;
+  height: 45px;
+  background-color: #ee8787;
+  
+`
+
 export const ErrorMessage = styled.p`
   font-style: normal;
   font-weight: 400;
   text-wrap: normal;
-  margin-bottom: 30px;
   color: red;
+`
+
+export const ButtonFechar = styled.button`
+  background: transparent;
+  border: 1px solid black;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 18px;
+  right: 0;
+  cursor: pointer;
 `

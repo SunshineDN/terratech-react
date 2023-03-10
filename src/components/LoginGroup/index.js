@@ -1,4 +1,4 @@
-import {Container, H1, H3, ErrorMessage} from './styles'
+import {Container, H1, H3, ErrorMessage, ErrorContainer, ButtonFechar} from './styles'
 import {Input} from "../Input";
 import {Button} from "../Button";
 import {GButton} from "../GButton";
@@ -32,14 +32,23 @@ export const LoginGroup = () => {
     }, []);
 
     return (
-        <Container onSubmit={handleLogin}>
+        <>
+        {error ?
+            <ErrorContainer>
+                <ErrorMessage>{error}</ErrorMessage>
+                <ButtonFechar>
+                    {"X"}
+                </ButtonFechar>
+            </ErrorContainer>
+            : null}
+        <Container onSubmit={handleLogin} msg={!!error}>
             <H1>{"Área de Login"}</H1>
-            <Input label={"Email"} type={'email'} onChange={(e) => setEmail(e.target.value)}/>
+            <Input label={"Email"} onChange={(e) => setEmail(e.target.value)}/>
             <Input label={"Senha"} type={'password'} onChange={(e) => setPassword(e.target.value)}/>
-            {error ? <ErrorMessage>{error}</ErrorMessage> : null}
             <Button value={"Login"} type={'submit'}/>
             <H3>{"OU"}</H3>
             <GButton />
         </Container>
+        </>
     )
 }
