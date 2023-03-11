@@ -15,7 +15,7 @@ export const LoginGroup = () => {
     const handleLogin = useCallback(async (event) => {
         event.preventDefault()
         try {
-            const response = await api.post("/users/login", { email: email, password: password });
+            const response = await api.post("/users/login", { email, password });
             if (response.status === 200) {
                 navigate("/home")
             } else {
