@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {InputText, InputBox, InputLabel} from "./styles";
 
 export const Input = ({label, type, onChange}) => {

@@ -34,37 +34,41 @@ export const H3 = styled.h3`
   margin: 42px 0;
 `
 
-
-export const ErrorContainer = styled.div`
+export const ErrorMessage = styled.div`
+  border: 2px solid rgb(234, 126, 126);
+  width: 70%;
+  text-align: center;
+  margin-top: 42px;
+  padding: 5px 15px 5px 5px;
   box-sizing: border-box;
-  margin: 40px auto 0 auto;
-  border: 2px solid #e8b4b4;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 520px;
-  padding: 30px 0;
-  height: 45px;
-  background-color: #ee8787;
-  
-`
-
-export const ErrorMessage = styled.p`
+  border-radius: 8px;
+  background-color: rgb(229, 174, 174);
   font-style: normal;
   font-weight: 400;
-  text-wrap: normal;
+  line-break: loose;
   color: red;
+  position: relative;
 `
 
 export const ButtonFechar = styled.button`
-  background: transparent;
-  border: 1px solid black;
-  width: 24px;
-  height: 24px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgb(255, 201, 201);
+  border: 1px solid red;
+  color: red;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   text-align: center;
   font-size: 18px;
   right: 0;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  &:hover{
+    opacity: .7;
+  }
 `

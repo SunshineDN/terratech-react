@@ -1,4 +1,4 @@
-import {Container, H1, H3, ErrorMessage, ErrorContainer, ButtonFechar} from './styles'
+import {Container, H1, H3, ErrorMessage, ButtonFechar} from './styles'
 import {Input} from "../Input";
 import {Button} from "../Button";
 import {GButton} from "../GButton";
@@ -15,7 +15,7 @@ export const LoginGroup = () => {
     const handleLogin = useCallback(async (event) => {
         event.preventDefault()
         try {
-            const response = await api.post("/users/login", { email, password });
+            const response = await api.post("/users/login", { email: email, password: password });
             if (response.status === 200) {
                 navigate("/home")
             } else {
@@ -25,7 +25,7 @@ export const LoginGroup = () => {
             console.error("Error", error);
             setError("Algo deu errado! verifique o email e a senha e tente novamente.")
         }
-    }, [email, password])
+    }, [email, password, navigate])
 
     useEffect(() => {
         return () => setError("");
@@ -33,19 +33,15 @@ export const LoginGroup = () => {
 
     return (
         <>
-        {error ?
-            <ErrorContainer>
-                <ErrorMessage>{error}</ErrorMessage>
-                <ButtonFechar>
-                    {"X"}
-                </ButtonFechar>
-            </ErrorContainer>
-            : null}
         <Container onSubmit={handleLogin} msg={!!error}>
             <H1>{"Área de Login"}</H1>
             <Input label={"Email"} onChange={(e) => setEmail(e.target.value)}/>
             <Input label={"Senha"} type={'password'} onChange={(e) => setPassword(e.target.value)}/>
             <Button value={"Login"} type={'submit'}/>
+            {error ?
+                <>
+                <ErrorMessage>{error}<ButtonFechar onClick={e => setError("")}>{"X"}</ButtonFechar></ErrorMessage>
+                </> : null}
             <H3>{"OU"}</H3>
             <GButton />
         </Container>
