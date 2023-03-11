@@ -2,35 +2,16 @@ import {Container, H1, H3, ErrorMessage, ButtonFechar} from './styles'
 import {Input} from "../Input";
 import {Button} from "../Button";
 import {GButton} from "../GButton";
-import {api} from "../../services/api"
-import {useCallback, useEffect, useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {useState} from "react";
+import {useLoginValidate} from "../../hooks/useLoginValidate"
+
 
 export const LoginGroup = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
-    const navigate = useNavigate()
 
-    const handleLogin = useCallback(async (event) => {
-        event.preventDefault();
-        if (email.includes("@") && email.includes(".com")){
-        } else {
-            setError("Email inválido, verifique seu email");
-            return;
-        };
-        try {
-            const response = await api.post("/users/login", { email, password });
-            if (response.status === 200) {
-                navigate("/home")
-            } else {
-                setError(response.data.message)
-            };
-        } catch (error) {
-            console.error("Error", error);
-            setError("Algo deu errado! Verifique o email e a senha e tente novamente.")
-        };
-    }, [email, password, navigate])
+    const handleLogin = useLoginValidate(email, password, setError)
 
     // useEffect(() => {
     //     return () => setTimeout(() => {
@@ -47,7 +28,7 @@ export const LoginGroup = () => {
             <Button value={"Login"} type={'submit'}/>
             {error ?
                 <>
-                <ErrorMessage>{error}<ButtonFechar onClick={e => setError("")}>{"X"}</ButtonFechar></ErrorMessage>
+                <ErrorMessage>{error}<ButtonFechar onClick={() => setError("")}>{"X"}</ButtonFechar></ErrorMessage>
                 </> : null}
             <H3>{"OU"}</H3>
             <GButton />
