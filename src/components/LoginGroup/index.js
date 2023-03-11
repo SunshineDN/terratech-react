@@ -13,29 +13,36 @@ export const LoginGroup = () => {
     const navigate = useNavigate()
 
     const handleLogin = useCallback(async (event) => {
-        event.preventDefault()
+        event.preventDefault();
+        if (email.includes("@") && email.includes(".com")){
+        } else {
+            setError("Email inválido, verifique seu email");
+            return;
+        };
         try {
             const response = await api.post("/users/login", { email: email, password: password });
             if (response.status === 200) {
                 navigate("/home")
             } else {
                 setError(response.data.message)
-            }
+            };
         } catch (error) {
             console.error("Error", error);
-            setError("Algo deu errado! verifique o email e a senha e tente novamente.")
-        }
+            setError("Algo deu errado! Verifique o email e a senha e tente novamente.")
+        };
     }, [email, password, navigate])
 
-    useEffect(() => {
-        return () => setError("");
-    }, []);
+    // useEffect(() => {
+    //     return () => setTimeout(() => {
+    //         setError("");
+    //     }, 7000);
+    // }, [error]);
 
     return (
         <>
         <Container onSubmit={handleLogin} msg={!!error}>
             <H1>{"Área de Login"}</H1>
-            <Input label={"Email"} onChange={(e) => setEmail(e.target.value)}/>
+            <Input label={"Email"} type={'text'} onChange={(e) => setEmail(e.target.value)}/>
             <Input label={"Senha"} type={'password'} onChange={(e) => setPassword(e.target.value)}/>
             <Button value={"Login"} type={'submit'}/>
             {error ?
