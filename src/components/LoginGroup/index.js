@@ -11,8 +11,6 @@ export const LoginGroup = () => {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
-    const handleLogin = useLoginValidate(email, password, setError)
-
     // useEffect(() => {
     //     return () => setTimeout(() => {
     //         setError("");
@@ -21,7 +19,7 @@ export const LoginGroup = () => {
 
     return (
         <>
-        <Container onSubmit={handleLogin} msg={!!error}>
+        <Container onSubmit={useLoginValidate(email, password, setError)} msg={!!error}>
             <H1>{"Área de Login"}</H1>
             <Input label={"Email"} type={'text'} onChange={(e) => setEmail(e.target.value)}/>
             <Input label={"Senha"} type={'password'} onChange={(e) => setPassword(e.target.value)}/>

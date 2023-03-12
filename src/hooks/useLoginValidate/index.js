@@ -23,6 +23,6 @@ export const useLoginValidate = (email, password, setError) => {
                 console.error("Error", error);
                 setError("Algo deu errado! Verifique o email e a senha e tente novamente.")
             }
-        }, [email, password, navigate])
+        }, [email, password, navigate, setError])
     )
 }
