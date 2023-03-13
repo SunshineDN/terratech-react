@@ -6,6 +6,7 @@ export const InputBox = styled.div`
   margin-bottom: 50px;
   position: relative;
   width: 70%;
+  z-index: 1;
 `;
 
 export const InputText = styled.input.attrs({

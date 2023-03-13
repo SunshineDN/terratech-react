@@ -1,6 +1,7 @@
 import {Container, H1, H3, ErrorMessage, ButtonFechar} from './styles'
 import {FiMail} from "react-icons/fi"
 import {MdLock} from "react-icons/md"
+import {BsWhatsapp} from "react-icons/bs"
 import {Input} from "../Input";
 import {Button} from "../Button";
 import {GButton} from "../GButton";

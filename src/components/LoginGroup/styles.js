@@ -56,7 +56,7 @@ export const ButtonFechar = styled(FaRegWindowClose)`
   margin-right: 2px;
   bottom: 0;
   right: 0;
-  fill: red;
+  color: red;
   width: 22px;
   height: 22px;
   cursor: pointer;
