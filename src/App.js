@@ -1,23 +1,36 @@
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
+  useNavigate
 } from "react-router-dom";
-import {Home} from "./pages/home";
-import {Login} from "./pages/login";
-import {Cadastro} from "./pages/cadastro";
-import { useState } from "react";
+import { Home } from "./pages/home";
+import { Login } from "./pages/login";
+import { Cadastro } from "./pages/cadastro";
+import { useState, useEffect } from "react";
 import Loading from "./components/LoadingComponent";
-import { useLoginVerification } from "./hooks/useLoginVerification";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
 
-  useLoginVerification(setIsLoggedIn)
+  const navigate = useNavigate;
+  const logged = sessionStorage.getItem('auth');
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (logged !== null) {
+        setIsLoggedIn(true);
+        navigate('/home')
+      } else {
+        setIsLoggedIn(false);
+        console.error("Failed to log in");
+      }
+    }, 1500);
+  }, [navigate, logged, setIsLoggedIn]);
 
   return (
     <>
-      { isLoggedIn && <Loading />}
+      {isLoggedIn && <Loading />}
       <Router >
         <Routes>
           <Route path="/home" element={<Home />} />
