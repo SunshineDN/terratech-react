@@ -15,6 +15,8 @@ export const useLoginValidate = (email, password, setError) => {
             try {
                 const response = await api.post("/users/login", { email, password });
                 if (response.status === 200) {
+                    // localStorage.setItem("token", response.data.token);
+                    sessionStorage.setItem("auth", true);
                     navigate("/home")
                 } else {
                     setError(response.data.message)

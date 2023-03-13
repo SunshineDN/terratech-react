@@ -6,9 +6,18 @@ import {
 import {Home} from "./pages/home";
 import {Login} from "./pages/login";
 import {Cadastro} from "./pages/cadastro";
+import { useState } from "react";
+import Loading from "./components/LoadingComponent";
+import { useLoginVerification } from "./hooks/useLoginVerification";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+
+  useLoginVerification(setIsLoggedIn)
+
   return (
+    <>
+      { isLoggedIn && <Loading />}
       <Router >
         <Routes>
           <Route path="/home" element={<Home />} />
@@ -16,6 +25,7 @@ function App() {
           <Route path="/cadastro" element={<Cadastro />} />
         </Routes>
       </Router>
+    </>
   );
 }
 
