@@ -3,7 +3,7 @@ import {api} from "../../services/api";
 import {useNavigate} from "react-router-dom";
 
 export const useLoginValidate = (email, password, setError) => {
-    const navigate = useNavigate()
+    const navigate = useNavigate;
     return (
         useCallback(async (event) => {
             event.preventDefault();
