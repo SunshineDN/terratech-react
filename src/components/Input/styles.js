@@ -23,8 +23,6 @@ export const InputText = styled.input.attrs({
   outline: none;
   padding: 0 6px;
   width: 100%;
-
-
 `;
 
 export const InputLabel = styled.label`
@@ -39,7 +37,7 @@ export const InputLabel = styled.label`
     transform: translateY(-50%);
     transition: .5s;
   ${InputText}:focus ~ &, ${InputText}:valid ~ &{
-    top: -5px;
+    top: -10px;
   }
 `;
 
