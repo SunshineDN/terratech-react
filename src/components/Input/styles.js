@@ -41,6 +41,14 @@ export const InputLabel = styled.label`
   }
 `;
 
-export const ErrorContainer = styled.p`
-  color: red;
+export const Icon = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 2px;
+  
+  & > * {
+    color: #F1F1E8;
+  }
+  
 `

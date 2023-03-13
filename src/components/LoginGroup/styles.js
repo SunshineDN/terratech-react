@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {FaRegWindowClose} from "react-icons/fa"
 
 export const Container = styled.form`
   box-sizing: border-box;
@@ -50,22 +51,14 @@ export const ErrorMessage = styled.div`
   position: relative;
 `
 
-export const ButtonFechar = styled.button`
+export const ButtonFechar = styled(FaRegWindowClose)`
   position: absolute;
+  margin-right: 2px;
   bottom: 0;
   right: 0;
-  background: rgb(255, 201, 201);
-  border: 1px solid red;
-  color: red;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 18px;
-  right: 0;
+  fill: red;
+  width: 22px;
+  height: 22px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   &:hover{
