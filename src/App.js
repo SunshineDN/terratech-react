@@ -17,7 +17,7 @@ function App() {
   const logged = sessionStorage.getItem('auth');
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       if (logged !== null) {
         setIsLoggedIn(true);
         navigate('/home')
@@ -26,6 +26,11 @@ function App() {
         console.error("Failed to log in");
       }
     }, 1500);
+
+    return () => {
+      clearTimeout(timer);
+    };
+
   }, [navigate, logged, setIsLoggedIn]);
 
   return (
