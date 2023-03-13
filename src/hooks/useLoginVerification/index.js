@@ -15,6 +15,6 @@ export const useLoginVerification = (setIsLoggedIn) => {
                     console.log("Failed to log in");
                 }
             }, 1500);
-        }, [logged, setIsLoggedIn])
+        }, [navigate, logged, setIsLoggedIn])
     )
 }
