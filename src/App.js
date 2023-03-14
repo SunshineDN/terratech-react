@@ -1,12 +1,11 @@
 import {
   Routes,
-  Route,
-  useNavigate
+  Route
 } from "react-router-dom";
 import { Home } from "./pages/home";
 import { Login } from "./pages/login";
 import { Cadastro } from "./pages/cadastro";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Loading from "./components/LoadingComponent";
 import {useLoginVerify} from "./hooks/useLoginVerify";
 

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {FiMail} from "react-icons/fi"
 import {MdLock} from "react-icons/md"
-import {Container, H1, H3, Background, ModalWrapper, CloseButton, Column, ContainerTitle} from './styles'
+import {Container, H1, H3, Background, ModalWrapper, CloseButton, Column} from './styles'
 import {Input} from "../Input";
 import {LoginButton} from "../Button/styles";
 
