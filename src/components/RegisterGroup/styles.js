@@ -28,11 +28,11 @@ export const H1 = styled.h1`
 export const H3 = styled.h3`
   font-style: normal;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 2em;
   text-align: center;
   color: #F1F1E8;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin: 42px 0;
+  margin: 42px auto;
 `
 
 export const Background = styled.div`
@@ -48,23 +48,26 @@ export const Background = styled.div`
   align-items: center;
 `
 export const ModalWrapper = styled.div`
-  width: 700px;
+  padding: 0 40px;
+  width: 990px;
   height: 700px;
   box-shadow: 0 5px 16px rgba(70, 103, 69, 0.5);
   background: #474F38;
   color: #fff;
-  display: flex;
-  align-items: center;
-  flex-flow: column wrap;
   position: relative;
   z-index: 11;
   border-radius: 10px;
 `
+
 export const Column = styled.div`
+  column-count: 2;
+  
+`
+
+export const ContainerTitle = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: column;
-  width: 50%;
+  justify-content: flex-start;
 `
 export const CloseButton = styled(IoIosClose)`
   width: 32px;

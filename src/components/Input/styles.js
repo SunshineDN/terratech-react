@@ -18,9 +18,7 @@ export const InputText = styled.input.attrs({
   border: none;
   height: 47px;
   background-color: transparent;
-  border: none;
   color: #fff;
-  height: 100%;
   outline: none;
   padding: 0 6px;
   width: 100%;
@@ -44,7 +42,7 @@ export const InputLabel = styled.label`
 
 export const Icon = styled.div`
   position: absolute;
-  bottom: 0;
+  bottom: 20%;
   right: 0;
   margin-right: 2px;
   
