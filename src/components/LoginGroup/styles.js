@@ -53,7 +53,6 @@ export const ErrorMessage = styled.div`
 
 export const ButtonFechar = styled(FaRegWindowClose)`
   position: absolute;
-  margin-right: 2px;
   bottom: 0;
   right: 0;
   color: red;
@@ -61,7 +60,8 @@ export const ButtonFechar = styled(FaRegWindowClose)`
   height: 22px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+  opacity: .5;
   &:hover{
-    opacity: .7;
+    opacity: .3;
   }
 `

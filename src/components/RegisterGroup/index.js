@@ -11,11 +11,7 @@ export const RegisterGroup = () => {
 
     const handleToggleModalTrue = (e) => {
         e.preventDefault();
-        if (isModalOpen) {
-            setIsModalOpen(false)
-        } else {
-            setIsModalOpen(true)
-        }
+        setIsModalOpen(!isModalOpen)
     }
 
     return (
@@ -23,22 +19,20 @@ export const RegisterGroup = () => {
             {isModalOpen ?
                 <Background>
                     <ModalWrapper>
-                        <ContainerTitle>
-                            <CloseButton onClick={(e) => { handleToggleModalTrue(e) }}/>
-                            <H3>{"Completando o cadastro"}</H3>
-                        </ContainerTitle>
+                        <CloseButton onClick={(e) => { handleToggleModalTrue(e) }}/>
+                        <H3>{"Completando o cadastro"}</H3>
                         <Column>
-                            <Input label={"Nome"} icon={<FiMail/>}/>
-                            <Input label={"Data de nascimento"} icon={<FiMail/>}/>
-                            <Input label={"CEP"} icon={<FiMail/>}/>
-                            <Input label={"Cidade"} icon={<FiMail/>}/>
-                            <Input label={"Bairro"} icon={<FiMail/>}/>
-                            <Input label={"CPF"} icon={<FiMail/>}/>
-                            <Input label={"Estado"} icon={<FiMail/>}/>
-                            <Input label={"Rua"} icon={<FiMail/>}/>
-                            <Input label={"Numero"} icon={<FiMail/>}/>
+                            <Input label={"Nome"} type={"text"} icon={<FiMail/>}/>
+                            <Input label={"Data de nascimento"} type={"datetime-local"} icon={<FiMail/>}/>
+                            <Input label={"CEP"} icon={<FiMail/>} type={"text"}/>
+                            <Input label={"Cidade"} icon={<FiMail/>} type={"text"}/>
+                            <Input label={"Bairro"} icon={<FiMail/>} type={"text"}/>
+                            <Input label={"CPF"} icon={<FiMail/>} type={"text"}/>
+                            <Input label={"Estado"} icon={<FiMail/>} type={"text"}/>
+                            <Input label={"Rua"} icon={<FiMail/>} type={"text"}/>
+                            <Input label={"Numero"} icon={<FiMail/>} type={"number"}/>
                         </Column>
-
+                        <LoginButton>Cadastrar</LoginButton>
                     </ModalWrapper>
                 </Background>
                 :null}
@@ -47,9 +41,7 @@ export const RegisterGroup = () => {
                 <Input label={"Email"} icon={<FiMail/>}/>
                 <Input label={"Senha"} icon={<MdLock/>}/>
                 <Input label={"Confirmar senha"} icon={<MdLock />}/>
-                <LoginButton onClick={(e) => { handleToggleModalTrue(e) } }>
-                    {"Cadastrar"}
-                </LoginButton>
+                <LoginButton onClick={(e) => { handleToggleModalTrue(e) } }>Próximo</LoginButton>
             </Container>
         </>
     )

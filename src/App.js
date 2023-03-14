@@ -1,5 +1,4 @@
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
   useNavigate
@@ -9,40 +8,21 @@ import { Login } from "./pages/login";
 import { Cadastro } from "./pages/cadastro";
 import { useState, useEffect } from "react";
 import Loading from "./components/LoadingComponent";
+import {useLoginVerify} from "./hooks/useLoginVerify";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [showLoading, setShowLoading] = useState(true);
 
-  const navigate = useNavigate;
-  const logged = sessionStorage.getItem('auth');
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (logged !== null) {
-        setIsLoggedIn(true);
-        navigate('/home')
-      } else {
-        setIsLoggedIn(false);
-        console.error("Failed to log in");
-      }
-    }, 1500);
-
-    return () => {
-      clearTimeout(timer);
-    };
-
-  }, [navigate, logged, setIsLoggedIn]);
+  useLoginVerify(setShowLoading)
 
   return (
     <>
-      {isLoggedIn && <Loading />}
-      <Router >
+      {showLoading && <Loading />}
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/" element={<Login />} />
           <Route path="/cadastro" element={<Cadastro />} />
         </Routes>
-      </Router>
     </>
   );
 }

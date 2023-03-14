@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import {IoIosClose} from "react-icons/io"
+import {InputBox} from "../Input/styles";
+import {LoginButton} from "../Button/styles";
 
 export const Container = styled.form`
   box-sizing: border-box;
@@ -50,26 +52,34 @@ export const Background = styled.div`
 export const ModalWrapper = styled.div`
   padding: 0 40px;
   width: 990px;
-  height: 700px;
+  height: 90%;
   box-shadow: 0 5px 16px rgba(70, 103, 69, 0.5);
   background: #474F38;
   color: #fff;
   position: relative;
   z-index: 11;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+  & > ${LoginButton} {
+    margin-top: 14.5%;
+    max-width: 350px;
+  }
 `
 
 export const Column = styled.div`
   column-count: 2;
-  
-`
-
-export const ContainerTitle = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  column-gap: 20px;
+  & ${InputBox} {
+    margin-left: 14.5% !important;
+  }
 `
 export const CloseButton = styled(IoIosClose)`
+  position: absolute;
+  top: 5%;
+  left: 5%;
   width: 32px;
   height: 32px;
   cursor: pointer;

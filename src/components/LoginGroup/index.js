@@ -26,7 +26,7 @@ export const LoginGroup = () => {
             <H1>{"Área de Login"}</H1>
             <Input label={"Email"} type={'text'} onChange={(e) => setEmail(e.target.value)} icon={<FiMail />}/>
             <Input label={"Senha"} type={'password'} onChange={(e) => setPassword(e.target.value)} icon={<MdLock />}/>
-            <Button value={"Login"} type={'submit'}/>
+            <Button value={"Login"} type={'submit'} />
             {error ?
                 <>
                 <ErrorMessage>{error}<ButtonFechar onClick={() => setError("")} /></ErrorMessage>
