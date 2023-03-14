@@ -23,7 +23,7 @@ export const RegisterGroup = () => {
                         <H3>{"Completando o cadastro"}</H3>
                         <Column>
                             <Input label={"Nome"} type={"text"} icon={<FiMail/>}/>
-                            <Input label={"Data de nascimento"} type={"datetime-local"} icon={<FiMail/>}/>
+                            <Input label={"Data de nascimento"} type={"date"} icon={<FiMail/>}/>
                             <Input label={"CEP"} icon={<FiMail/>} type={"text"}/>
                             <Input label={"Cidade"} icon={<FiMail/>} type={"text"}/>
                             <Input label={"Bairro"} icon={<FiMail/>} type={"text"}/>
