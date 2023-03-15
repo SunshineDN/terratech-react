@@ -5,7 +5,7 @@ import {Input} from "../Input";
 import {Button} from "../Button";
 import {GButton} from "../GButton";
 import {useState} from "react";
-import {LoginValidate} from "../../hooks/loginValidate"
+import {useLoginValidate} from "../../hooks/useLoginValidate"
 import * as yup from "yup";
 import {useFormik} from "formik";
 
@@ -23,11 +23,6 @@ export const LoginGroup = () => {
             password: '',
         },
         validationSchema: loginSchema,
-        onSubmit: (values) => {
-            const {email, password} = values;
-            //Enviar os dados para validar aqui
-            LoginValidate(email, password, setError);
-        },
     });
 
     // useEffect(() => {
@@ -38,7 +33,7 @@ export const LoginGroup = () => {
 
     return (
         <>
-        <Container onSubmit={formik.handleSubmit} msg={!!error}>
+        <Container onSubmit={useLoginValidate(formik.values.email, formik.values.password, setError)} msg={!!error}>
             <H1>{"Área de Login"}</H1>
             <Input name={"email"}
                    type={"text"}

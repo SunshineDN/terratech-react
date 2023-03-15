@@ -2,10 +2,10 @@ import {useCallback} from "react";
 import {api} from "../../services/api";
 import {useNavigate} from "react-router-dom";
 
-export const LoginValidate = (email, password, setError) => {
+export const useLoginValidate = (email, password, setError) => {
     const navigate = useNavigate();
     return (
-        useCallback(async (event) => {
+        useCallback(async (event, password) => {
             event.preventDefault();
             // if (email.includes("@") && email.includes(".com")){
             //     setError("");
@@ -28,6 +28,6 @@ export const LoginValidate = (email, password, setError) => {
                 console.error("Error", error);
                 setError("Erro no sistema, email ou senha inválidos");
             }
-        }, [email, password, navigate, setError])
+        }, [email, navigate, setError])
     )
 }
