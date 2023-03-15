@@ -2,7 +2,7 @@ import {useCallback} from "react";
 import {api} from "../../services/api";
 import {useNavigate} from "react-router-dom";
 
-export const useLoginValidate = (email, password, setError) => {
+export const LoginValidate = (email, password, setError) => {
     const navigate = useNavigate();
     return (
         useCallback(async (event) => {
@@ -14,7 +14,7 @@ export const useLoginValidate = (email, password, setError) => {
             //     return;
             // }
 
-            email.includes("@") && email.includes(".com") ? setError("") : setError("Email inválido, verifique seu email");
+            // email.includes("@") && email.includes(".com") ? setError("") : setError("Email inválido, verifique seu email");
 
             try {
                 const response = await api.post("/users/login", { email, password });

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const InputBox = styled.div`
   border-bottom: 2px solid #CDCDC5FF;
   height: 47px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   position: relative;
   width: 70%;
   z-index: 1;
@@ -18,10 +18,23 @@ export const InputText = styled.input.attrs({
   border: none;
   height: 47px;
   background-color: transparent;
-  color: #fff;
+  color: ${props => props.type === 'date' ? "transparent" +
+      "" : "#fff" };
   outline: none;
   padding: 0 6px;
   width: 100%;
+
+  &::-webkit-calendar-picker-indicator {
+    background-color: transparent;
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+    padding: 3px;
+    cursor: pointer;
+  }
 `;
 
 export const InputLabel = styled.label`
@@ -49,5 +62,8 @@ export const Icon = styled.div`
   & > * {
     color: #F1F1E8;
   }
-  
+`
+export const ErrorMessage = styled.p`
+  color: red;
+  padding: 8px 6px;
 `

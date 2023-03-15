@@ -1,12 +1,14 @@
 import React from "react";
-import {InputText, InputBox, InputLabel, Icon} from "./styles";
+import {InputText, InputBox, InputLabel, Icon, ErrorMessage} from "./styles";
 
-export const Input = ({label, type, onChange, icon}) => {
+
+export const Input = ({ name, label, type, onChange, onBlur, value, error, icon }) => {
 
     return (
         <InputBox>
             {icon ? <Icon>{icon}</Icon> : null}
-            <InputText type={type} onChange={onChange}/>
+            <InputText name={name} value={value} onBlur={onBlur} type={type} onChange={onChange}/>
+            {error ? <ErrorMessage>{error}</ErrorMessage> : null}
             <InputLabel >{label}</InputLabel>
         </InputBox>
     )

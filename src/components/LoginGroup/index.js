@@ -5,13 +5,30 @@ import {Input} from "../Input";
 import {Button} from "../Button";
 import {GButton} from "../GButton";
 import {useState} from "react";
-import {useLoginValidate} from "../../hooks/useLoginValidate"
+import {LoginValidate} from "../../hooks/loginValidate"
+import * as yup from "yup";
+import {useFormik} from "formik";
 
+
+const loginSchema = yup.object().shape({
+    email: yup.string().email('Email inválido').required('Informe um email'),
+    password: yup.string().min(6,'Sua senha deve ter pelo menos 6 digitos').required('Informe a senha')
+});
 
 export const LoginGroup = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+    const formik = useFormik({
+        initialValues: {
+            email: '',
+            password: '',
+        },
+        validationSchema: loginSchema,
+        onSubmit: (values) => {
+            const {email, password} = values;
+            //Enviar os dados para validar aqui
+            LoginValidate(email, password, setError);
+        },
+    });
 
     // useEffect(() => {
     //     return () => setTimeout(() => {
@@ -21,10 +38,26 @@ export const LoginGroup = () => {
 
     return (
         <>
-        <Container onSubmit={useLoginValidate(email, password, setError)} msg={!!error}>
+        <Container onSubmit={formik.handleSubmit} msg={!!error}>
             <H1>{"Área de Login"}</H1>
-            <Input label={"Email"} type={'text'} onChange={(e) => setEmail(e.target.value)} icon={<FiMail />}/>
-            <Input label={"Senha"} type={'password'} onChange={(e) => setPassword(e.target.value)} icon={<MdLock />}/>
+            <Input name={"email"}
+                   type={"text"}
+                   label={"Email"}
+                   onChange={formik.handleChange}
+                   value={formik.values.email}
+                   onBlur={formik.handleBlur}
+                   error={(formik.touched.email && formik.errors.email)}
+                   icon={<FiMail/>}
+            />
+            <Input name={"password"}
+                   type={"password"}
+                   label={"Senha"}
+                   onChange={formik.handleChange}
+                   value={formik.values.password}
+                   onBlur={formik.handleBlur}
+                   error={(formik.touched.password && formik.errors.password)}
+                   icon={<MdLock/>}
+            />
             <Button value={"Login"} type={'submit'} />
             {error ?
                 <>
