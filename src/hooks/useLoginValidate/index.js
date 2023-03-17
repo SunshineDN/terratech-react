@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 export const useLoginValidate = (email, password, setError) => {
     const navigate = useNavigate();
     return (
-        useCallback(async (event, password) => {
+        useCallback(async (event) => {
             event.preventDefault();
             // if (email.includes("@") && email.includes(".com")){
             //     setError("");
@@ -17,6 +17,7 @@ export const useLoginValidate = (email, password, setError) => {
             // email.includes("@") && email.includes(".com") ? setError("") : setError("Email inválido, verifique seu email");
 
             try {
+                console.log(email, password)
                 const response = await api.post("/users/login", { email, password });
                 if (response.status === 200) {
                     // localStorage.setItem("token", response.data.token);
@@ -28,6 +29,6 @@ export const useLoginValidate = (email, password, setError) => {
                 console.error("Error", error);
                 setError("Erro no sistema, email ou senha inválidos");
             }
-        }, [email, navigate, setError])
+        }, [email, password, navigate, setError])
     )
 }
