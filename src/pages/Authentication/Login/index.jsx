@@ -1,34 +1,24 @@
-import { LoginFormik } from '../../../utils/formik/Login';
+import { LoginSchema } from '../../../utils/schemas/Login';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 
 
 export const Login = () => {
-  const formik = LoginFormik();
+  const { register, handleSubmit, formState: { errors } } = useForm({
+    resolver: yupResolver(LoginSchema)
+  });
+
+  const onSubmit = (data) => {
+    alert(JSON.stringify(data, null, 2));
+  }
 
   return (
-    <form onSubmit={ formik.handleSubmit }>
-      <div>
-        <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          onChange={ formik.handleChange }
-          value={ formik.values.email }
-        />
-        { formik.errors.email ? <div>{ formik.errors.email }</div> : null }
-      </div>
-      <div>
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          onChange={ formik.handleChange }
-          value={ formik.values.password }
-        />
-        { formik.errors.password ? <div>{ formik.errors.password }</div> : null }
-      </div>
-      <button type="submit">Submit</button>
+    <form onSubmit={handleSubmit(onSubmit)} style={{backgroundColor: "springgreen"}}>
+      <input type="text" placeholder="Email" {...register("email")} />
+      <p>{errors.email?.message}</p>
+      <input type="password" placeholder="Senha" {...register("password")} />
+      <p>{errors.password?.message}</p>
+      <button type="submit">Entrar</button>
     </form>
-  );
+);
 };

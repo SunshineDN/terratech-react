@@ -1,56 +1,28 @@
-import { RegisterFormik } from '../../../utils/formik/Register/index.jsx';
+import { RegisterSchema } from '../../../utils/schemas/Register/index.jsx';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 
 export const Register = () => {
 
-  const formik = RegisterFormik();
+  const { register, handleSubmit, formState: { errors } } = useForm({
+    resolver: yupResolver(RegisterSchema),
+  });
+
+  const onSubmit = (data) => {
+    alert(JSON.stringify(data, null, 2));
+  };
 
   return (
-    <form onSubmit={ formik.handleSubmit }>
-      <div>
-        <label htmlFor="username">Username</label>
-        <input
-          id="username"
-          name="username"
-          type="text"
-          onChange={ formik.handleChange }
-          value={ formik.values.username }
-        />
-        { formik.errors.username ? <div>{ formik.errors.username }</div> : null }
-      </div>
-      <div>
-        <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          onChange={ formik.handleChange }
-          value={ formik.values.email }
-        />
-        { formik.errors.email ? <div>{ formik.errors.email }</div> : null }
-      </div>
-      <div>
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          onChange={ formik.handleChange }
-          value={ formik.values.password }
-        />
-        { formik.errors.password ? <div>{ formik.errors.password }</div> : null }
-      </div>
-      <div>
-        <label htmlFor="confirmPassword">Confirm Password</label>
-        <input
-          id="confirmPassword"
-          name="confirmPassword"
-          type="password"
-          onChange={ formik.handleChange }
-          value={ formik.values.confirmPassword }
-        />
-        { formik.errors.confirmPassword ? <div>{ formik.errors.confirmPassword }</div> : null }
-      </div>
-      <button type="submit">Submit</button>
+    <form onSubmit={ handleSubmit(onSubmit) } style={ { backgroundColor: 'springgreen' } }>
+      <input type="text" placeholder="Username" { ...register('username') } />
+      <p>{ errors.name?.message }</p>
+      <input type="text" placeholder="Email" { ...register('email') } />
+      <p>{ errors.email?.message }</p>
+      <input type="password" placeholder="Senha" { ...register('password') } />
+      <p>{ errors.password?.message }</p>
+      <input type="password" placeholder="Confirmar senha" { ...register('confirmPassword') } />
+      <p>{ errors.confirmPassword?.message }</p>
+      <button type="submit">Cadastrar</button>
     </form>
   );
 };
