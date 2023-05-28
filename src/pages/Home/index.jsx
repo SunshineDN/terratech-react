@@ -1,7 +1,10 @@
+import { SectionContainer } from './styles.js';
+
 export const Home = () => {
   return (
-    <div>
+    <SectionContainer>
       <h1>Home</h1>
-    </div>
+    </SectionContainer>
   );
+
 };
