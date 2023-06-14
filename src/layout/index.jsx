@@ -13,6 +13,8 @@ const Wrapper = styled.div`
   padding: 12px;
 `;
 
+
+// basta chamar o layout em e envolver o conteúdo nele
 export const Layout = ({ children }) => {
   return (
     <Wrapper>
