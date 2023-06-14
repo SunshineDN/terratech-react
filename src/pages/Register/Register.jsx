@@ -1,14 +1,14 @@
-import RegisterModal from "../../components/RegisterModal"
-import SectionOffset from "../../components/SectionOffset"
-import { Container } from "./styles"
+import RegisterModal from '../../components/RegisterModal';
+import SectionOffset from '../../components/SectionOffset';
+import { Container } from './styles';
 
 const Register = () => {
   return (
-  <Container>
-    <RegisterModal />
-    <SectionOffset />
-  </Container>
-  )
-}
+    <Container>
+      <RegisterModal/>
+      <SectionOffset/>
+    </Container>
+  );
+};
 
-export default Register
+export default Register;

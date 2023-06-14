@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   *, *::before, *::after {
@@ -7,12 +7,12 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
-  
+
   input, textarea, select, button {
     border: none;
     outline: none;
   }
-  
+
   a {
     text-decoration: none;
     color: inherit;

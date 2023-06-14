@@ -35,11 +35,12 @@ export const NavItem = styled(NavLink)`
   ${ ({ $bottom }) => $bottom && `margin-top: auto;` }
   
   &:hover {
-    background: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.2)
   }
   
   &.active {
-    background: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #0E2019;
   }
 `;
 

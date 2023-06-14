@@ -11,11 +11,11 @@ export const SideBar = () => {
   return (
     <Container>
       <NavBar>
-        <NavItem to={ '/home' }>
+        <NavItem to={ '/profile' }>
           <User src={ UserImg }/>
           <NavText>Nome da silva</NavText>
         </NavItem>
-        <NavItem to={ '/home' }>
+        <NavItem to={ '/' }>
           <NavIcon src={ Home }/>
           <NavText>Início</NavText>
         </NavItem>

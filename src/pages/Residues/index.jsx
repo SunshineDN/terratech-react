@@ -6,4 +6,4 @@ export const Residues = () => {
       <h1>Residues</h1>
     </Layout>
   );
-}
+};
