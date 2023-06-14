@@ -8,10 +8,6 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
   
-  body {
-    background: #08120E;
-  }
-  
   input, textarea, select, button {
     border: none;
     outline: none;
