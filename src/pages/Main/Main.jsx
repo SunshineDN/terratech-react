@@ -1,3 +1,4 @@
+import SideBar from "../../components/SideBar";
 import SideBarRoutes from "../../routes/SideBarRoutes";
 import styled from "styled-components";
 
@@ -17,7 +18,6 @@ const Container = styled.div`
 `
 
 const Main = () => {
-
     <Container>
         <SideBar />
         <SideBarRoutes />
