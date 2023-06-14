@@ -10,9 +10,7 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
       <Route path="*" element={<h1>Not Found</h1>} />
-      <Route element={<PrivateRoute />} >
-        <Route path="/" element={<h1>Home</h1>} />
-      </Route>
+      <Route path="/*" element={<></>} />
     </Routes>
   )
 }
