@@ -14,7 +14,7 @@ export const dark = () => ({
   background_color: '#08120E',
   card_color: '#0E2019',
   input_color: '#245939',
-  dark_green: '#206A5D',
-  button_color: '#24B27C',
+  button_color_primary: '#24B27C',
+  button_color_secondary: '#206A5D',
   accent_color: '#299A3B',
 });
