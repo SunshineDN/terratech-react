@@ -16,27 +16,27 @@ export const SideBar = () => {
           <NavText>Nome da silva</NavText>
         </NavItem>
         <NavItem to={ '/' }>
-          <NavIcon src={ Home }/>
+          <NavIcon icon={ Home }/>
           <NavText>Início</NavText>
         </NavItem>
         <NavItem to={ '/residues' }>
-          <NavIcon src={ Residues }/>
-          <NavText>Início</NavText>
+          <NavIcon icon={ Residues }/>
+          <NavText>Resíduos</NavText>
         </NavItem>
         <NavItem to={ '/colect' }>
-          <NavIcon src={ Collect }/>
-          <NavText>Início</NavText>
+          <NavIcon icon={ Collect }/>
+          <NavText>Pontos de coleta</NavText>
         </NavItem>
         <NavItem to={ '/coupons' }>
-          <NavIcon src={ Coupons }/>
-          <NavText>Início</NavText>
+          <NavIcon icon={ Coupons }/>
+          <NavText>Cupons</NavText>
         </NavItem>
         <NavItem to={ '/config' } $bottom>
-          <NavIcon src={ Gear }/>
+          <NavIcon icon={ Gear }/>
           <NavText>Configurações</NavText>
         </NavItem>
         <NavItem to={ '/support' }>
-          <NavIcon src={ Help }/>
+          <NavIcon icon={ Help }/>
           <NavText>Ajuda</NavText>
         </NavItem>
       </NavBar>

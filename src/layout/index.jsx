@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { SideBar } from './SideBar/index.jsx';
 import { Content } from './Content/index.jsx';
 import styled from 'styled-components';
@@ -12,7 +13,6 @@ const Wrapper = styled.div`
   padding: 12px;
   background-color: #08120E;
 `;
-
 
 // basta chamar o layout em e envolver o conteúdo nele
 export const Layout = ({ children }) => {

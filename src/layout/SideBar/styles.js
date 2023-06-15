@@ -44,9 +44,13 @@ export const NavItem = styled(NavLink)`
   }
 `;
 
-export const NavIcon = styled.img`
-  height: auto;
+export const NavIcon = styled.div`
+  height: 100%;
   width: 30px;
+  background-image: url( ${(props) => props.icon});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 `;
 
 export const NavText = styled.span`
