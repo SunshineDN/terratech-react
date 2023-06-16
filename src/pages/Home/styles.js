@@ -66,7 +66,6 @@ export const InputBox = styled.input`
   flex-direction: row;
   align-items: flex-start;
   padding: 10px 25px 10px 10px;
-  gap: 10px;
   width: 198px;
   height: 46px;
   background: #245939;
@@ -76,9 +75,7 @@ export const InputBox = styled.input`
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 800;
-    font-size: 19px;
-    line-height: 26px;
-    text-align: center;
+    font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.5);
   }
 `;

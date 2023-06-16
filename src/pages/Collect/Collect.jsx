@@ -1,9 +1,12 @@
 import React from 'react'
+import { Layout } from '../../layout';
 
 const Collect = () => {
   return (
-    <div>Collect</div>
+    <Layout>
+      <h1>Collect</h1>
+    </Layout>
   )
 }
 
-export default Collect
+export default Collect;

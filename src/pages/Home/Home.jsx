@@ -2,7 +2,7 @@ import { Layout } from '../../layout/index.jsx';
 import { Container, Filter, InputBox, NavBar, NavItem, SearchBar, SearchButton, SearchIcon } from './styles.js';
 
 
-export const Home = () => {
+const Home = () => {
   return (
     <Layout>
       <Container>
@@ -22,3 +22,5 @@ export const Home = () => {
     </Layout>
   );
 };
+
+export default Home;

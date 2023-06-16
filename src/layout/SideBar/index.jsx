@@ -23,7 +23,7 @@ export const SideBar = () => {
           <NavIcon icon={ Residues }/>
           <NavText>Resíduos</NavText>
         </NavItem>
-        <NavItem to={ '/colect' }>
+        <NavItem to={ '/collect' }>
           <NavIcon icon={ Collect }/>
           <NavText>Pontos de coleta</NavText>
         </NavItem>
