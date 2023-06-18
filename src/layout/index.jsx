@@ -4,8 +4,9 @@ import { Content } from './Content/index.jsx';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  width: fit-content;
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 5.2fr;
   grid-template-rows: 1fr;
@@ -14,7 +15,6 @@ const Wrapper = styled.div`
   background-color: #08120E;
 `;
 
-// basta chamar o layout em e envolver o conteúdo nele
 export const Layout = ({ children }) => {
   return (
     <Wrapper>

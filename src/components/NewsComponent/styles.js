@@ -16,42 +16,35 @@ export const NewsItem = styled.div`
   justify-content: center;
   align-items: center;
   padding: 10px;
+  border-radius: 8px;
   gap: 30px;
   width: 370px;
   height: 316px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease-in-out;
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.50);
-    border-radius: 8px;
   }
 `;
 
 export const NewsImage = styled.div`
   width: 100%;
   height: 100%;
-  border-radius: 12px;
-  height: 150px;
-  background: url(${(props) => props.src});
+  background: url(${({src}) => src}) center center no-repeat;
   filter: drop-shadow(-4px 4px 8px rgba(0, 0, 0, 0.25));
   border-radius: 4px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 `;
 
 export const NewsContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
   gap: 10px;
 `;
 
 export const NewsTitle = styled.h3`
-  font-family: 'Nunito';
   font-style: normal;
   font-weight: 800;
   font-size: 17px;
@@ -60,7 +53,6 @@ export const NewsTitle = styled.h3`
 `;
 
 export const NewsDescription = styled.p`
-  font-family: 'Nunito';
   font-style: normal;
   font-weight: 400;
   font-size: 15px;

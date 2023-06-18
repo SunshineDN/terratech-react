@@ -27,7 +27,6 @@ export const ResiduesItemsLeft = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 0px;
   gap: 28px;
 `;
 
@@ -42,13 +41,11 @@ export const ResiduesItemsLeftText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
   gap: 5px;
   max-width: 500px;
 `;
   
 export const ResiduesItemsLeftTextTitle = styled.div`
-  font-family: 'Nunito';
   font-style: normal;
   font-weight: 800;
   font-size: 20px;
@@ -57,7 +54,6 @@ export const ResiduesItemsLeftTextTitle = styled.div`
 `;
 
 export const ResiduesItemsLeftTextDescription = styled.div`
-  font-family: 'Nunito';
   font-style: normal;
   font-weight: 300;
   font-size: 17px;
@@ -78,7 +74,6 @@ export const ResiduesItemsRightTop = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
   gap: 26px;
 `;
 
@@ -86,7 +81,6 @@ export const ResiduesItemsRightTopTime = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
   gap: 8px;
 `;
 
@@ -96,7 +90,6 @@ export const ResiduesItemsRightTopTimeIcon = styled(BsClock)`
 `;
 
 export const ResiduesItemsRightTopTimeText = styled.span`
-  font-family: 'Nunito';
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -174,7 +167,6 @@ export const ResiduesItemsRightTopSituationDot = styled.div`
 `;
 
 export const ResiduesItemsRightTopSituationText = styled.span`
-  font-family: 'Nunito';
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -198,7 +190,6 @@ export const ResiduesItemsRightBottom = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
   gap: 12px;
 `;
 
@@ -210,7 +201,6 @@ export const ResiduesItemsRightBottomItem = styled.div`
 `;
 
 export const ResiduesItemsRightBottomItemTitle = styled.span`
-  font-family: 'Nunito';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -219,7 +209,6 @@ export const ResiduesItemsRightBottomItemTitle = styled.span`
 `;
 
 export const ResiduesItemsRightBottomItemDescription = styled.span`
-  font-family: 'Nunito';
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
