@@ -22,7 +22,6 @@ export const NewsItem = styled.div`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 
-
   &:hover {
     transform: scale(1.05);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.50);
