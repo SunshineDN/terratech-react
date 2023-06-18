@@ -16,5 +16,4 @@ export const dark = () => ({
   input_color: '#245939',
   button_color_primary: '#24B27C',
   button_color_secondary: '#206A5D',
-  accent_color: '#299A3B',
 });
