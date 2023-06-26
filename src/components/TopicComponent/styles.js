@@ -40,7 +40,7 @@ export const TopicContent = styled.ul`
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-  gap: 10px;
+  gap: 20px;
   cursor: pointer;
   user-select: none;
 `;
@@ -52,6 +52,16 @@ export const TopicItem = styled.li`
   padding: 0px;
   gap: 10px;
   width: 282px;
+
+  & > h3 {
+    ${(props) => props.$first ? `color: ${props.theme.button_color_primary}` : `color: ${props.theme.text_color}; opacity: 0.5`};
+  }
+
+  &:hover {
+    & > h3 {
+      color: ${({ theme }) => theme.button_color_primary};
+    }
+  }
 `;
 
 export const TopicItemCount = styled.h3`
@@ -61,7 +71,6 @@ export const TopicItemCount = styled.h3`
   font-size: 14px;
   line-height: 15px;
   text-align: center;
-  ${(props) => props.$first ? `color: ${props.theme.button_color_primary}` : `color: ${props.theme.text_color}; opacity: 0.5`};
 `;
 
 export const TopicItemTitle = styled.h3`
@@ -70,5 +79,4 @@ export const TopicItemTitle = styled.h3`
   font-weight: 600;
   font-size: 14px;
   line-height: 15px;
-  ${(props) => props.$first ? `color: ${props.theme.button_color_primary}` : `color: ${props.theme.text_color}; opacity: 0.5`};
 `;

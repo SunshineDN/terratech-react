@@ -10,9 +10,9 @@ const TopicComponent = ({ list }) => {
       </Top>
       <TopicContent>
         {list.map((item, index) => (
-          <TopicItem key={index}>
-            <TopicItemCount $first={item.rank === 1}>{item.rank}</TopicItemCount>
-            <TopicItemTitle $first={item.rank === 1}>{item.title}</TopicItemTitle>
+          <TopicItem $first={item.rank === 1} key={index}>
+            <TopicItemCount>{item.rank}</TopicItemCount>
+            <TopicItemTitle>{item.title}</TopicItemTitle>
           </TopicItem>))}
       </TopicContent>
     </TopicContainer>

@@ -31,13 +31,18 @@ export const FilterItem = styled.div`
   gap: 10px;
   background: ${({ theme }) => theme.button_color_primary};
   border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+
+  :hover {
+    opacity: 0.8;
+  }
 `;
 
 export const FilterItemText = styled.p`
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 600;
-  font-size: 11px;
+  font-size: .8rem;
   line-height: 15px;
   color: ${({ theme }) => theme.text_color};
 `;
@@ -55,7 +60,7 @@ export const FilterItemNotif = styled.span`
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 600;
-  font-size: 8px;
+  font-size: 10px;
   line-height: 11px;
 `;
 
@@ -70,9 +75,16 @@ export const AddButton = styled.button`
   color: ${({ theme }) => theme.text_color};
   cursor: pointer;
   user-select: none;
+  transition: all 0.2s ease-in-out;
+
+  :hover {
+    opacity: 0.8;
+  }
 `;
 
 export const AddIcon = styled(IoIosAdd)`
   font-size: 20px;
   color: ${({ theme }) => theme.text_color};
+  opacity: 1;
+  font-weight: 600;
 `;

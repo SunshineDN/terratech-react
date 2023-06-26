@@ -8,7 +8,7 @@ export const Filter = styled.div`
     align-items: center;
     padding: 10px 30px;
     width: 100%;
-    height: 66px;
+    height: 45px;
     background: #24B27C;
     border-radius: 8px;
     margin-bottom: 2rem;
@@ -30,13 +30,19 @@ export const NavItem = styled.li`
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: .8rem;
     line-height: 24px;
     display: flex;
     align-items: center;
     letter-spacing: 0.035em;
     color: #FFFFFF;
     cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+
+    :hover {
+      box-shadow: inset 0px -2px 0px #FFFFFF;
+    }
   `;
 
 export const SearchBar = styled.div`
@@ -53,14 +59,14 @@ export const InputBox = styled.input`
     align-items: flex-start;
     padding: 10px 25px 10px 10px;
     width: 198px;
-    height: 46px;
+    height: 35px;
     background: #245939;
     border-radius: 8px 0px 0px 8px;
     position: relative;
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 800;
-    font-size: 1.1rem;
+    font-size: .8rem;
     color: ${({ theme }) => theme.text_color};
     box-shadow: inset 4px 2px 4px rgba(0, 0, 0, 0.10);
   
@@ -68,12 +74,12 @@ export const InputBox = styled.input`
       font-family: 'Nunito';
       font-style: normal;
       font-weight: 800;
-      font-size: 1.1rem;
+      font-size: .8rem;
       color: rgba(255, 255, 255, 0.5);
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: 7%;
+      left: 6%;
     }
   `;
 
@@ -85,11 +91,15 @@ export const SearchButton = styled.button`
     padding: 13px;
     gap: 10px;
     width: 44.98px;
-    height: 46px;
+    height: 35px;
     background: ${({ theme }) => theme.button_color_secondary};
     border-radius: 0px 8px 8px 0px;
     cursor: pointer;
     box-shadow: inset -2px 2px 4px rgba(0, 0, 0, 0.10);
+
+    :hover {
+      background: ${({ theme }) => theme.button_color_secondary_hover};
+    }
   `;
 
 export const SearchIcon = styled(AiOutlineSearch)`
