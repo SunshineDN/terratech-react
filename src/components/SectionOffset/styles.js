@@ -37,7 +37,7 @@ export const FirstRectangle = styled.div`
   top: 0;
   right: 0;
   z-index: 1;
-  background-color: #20C593;
+  background-color: ${({ theme }) => theme.offset_secondary_color};
   border-radius: 400px 0px 0px 400px;
   animation: ${appearFromRight} 2s;
 `
@@ -49,7 +49,7 @@ export const SecondRectangle = styled.div`
   top: 0;
   right: 0;
   z-index: 2;
-  background: #0C8173;
+  background-color: ${({ theme }) => theme.accent_color};
   box-shadow: -3px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 400px 0px 0px 400px;
   display: flex;

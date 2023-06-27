@@ -20,9 +20,10 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.background_color};
   max-width: 507px;
   border-radius: 46px;
-  box-shadow: -3.9037270545959473px 3.9037270545959473px 13.012423515319824px 0px #00000040;
+  box-shadow: ${(props) => props.$active ? '-3.9037270545959473px 3.9037270545959473px 13.012423515319824px 0px #00000040' : 'none'};
   transform: scale(.85);
   animation: ${appearFromBottom(.85)} 1s;
+  transition: all .3s ease-in-out;
 
   @media (max-width: 1366px) {
     transform: scale(.7);
@@ -65,7 +66,7 @@ export const Input = styled.input`
   height: 55px;
   border-radius: 13px;
   border: 0.65px solid ${({ theme }) => theme.accent_color};
-  background-color: ${({ theme }) => theme.input_color};
+  background-color: ${({ theme }) => theme.background_color};
   box-shadow: inset 0px 2.60248px 13.0124px rgba(0, 0, 0, 0.25);
   padding: 14.6px 30px;
   font-family: 'Nunito';
@@ -73,12 +74,12 @@ export const Input = styled.input`
   font-weight: 600;
   font-size: 18.2174px;
   line-height: 25px;
-  color: ${({ theme }) => theme.blank};
+  color: ${({ theme }) => theme.text_color};
   outline: none;
 
   &::placeholder {
-    color: ${({ theme }) => theme.blank};
-    opacity: 0.5;
+    color: ${({ theme }) => theme.text_color};
+    opacity: 0.7;
   }
 `;
 
@@ -100,15 +101,15 @@ export const Button = styled.button`
   background-color: ${({ theme }) => theme.accent_color};
   font-family: 'Nunito';
   font-style: normal;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 18.2174px;
-  color: ${({ theme }) => theme.blank};
+  color: ${({ theme }) => theme.text_color};
   cursor: pointer;
   outline: none;
   transition: background-color 0.2s ease-in-out;
 
   &:hover {
-    background-color: ${({ theme }) => theme.offset_color_primary};
+    background-color: ${({ theme }) => theme.button_color_secondary_hover};
   }
 `
 
@@ -126,12 +127,12 @@ export const GoogleButton = styled.button`
   height: 55px;
   border-radius: 64px;
   border: none;
-  background-color: ${({ theme }) => theme.blank};
+  background-color: ${({ theme }) => theme.text_color};
   font-family: 'Nunito';
   font-style: normal;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 18.2174px;
-  color: ${({ theme }) => theme.text_color};
+  color: ${({ theme }) => theme.inverted_text_color};
   border: 0.65px solid ${({ theme }) => theme.accent_color};
   display: flex;
   align-items: center;
@@ -161,6 +162,7 @@ export const PolicyWrapper = styled.div`
   align-items: center;
   width: 100%;
   padding: 0 29px;
+  margin-bottom: 30px;
 `
 
 export const PolicyText = styled.p`
@@ -178,12 +180,13 @@ export const Link = styled.a`
   font-weight: 600;
   font-size: 18.2174px;
   color: ${({ theme }) => theme.accent_color};
+  opacity: .7;
   text-decoration: none;
   cursor: pointer;
-  transition: color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
-    color: ${({ theme }) => theme.offset_color_primary};
+    opacity: 1;
   }
 `
 
@@ -194,32 +197,19 @@ export const Line = styled.div`
   background-color: ${({ theme }) => theme.text_color};
 `
 
-export const ColectorRegisterWrapper = styled.div`
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 106px;
-  padding: 0 29px;
-  background-color: ${({ theme }) => theme.input_color};
-  border-bottom-left-radius: 46px;
-  border-bottom-right-radius: 46px;
-  text-align: center;
-`
-
 export const ColectorRegisterLink = styled.a`
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 600;
   font-size: 25px;
-  color: ${({ theme }) => theme.blank};
+  color: ${({ theme }) => theme.text_color};
   cursor: pointer;
   text-decoration: none;
+  margin-bottom: 30px;
   transition: all 0.2s ease-in-out;
+  opacity: 0.7;
 
   &:hover {
-    text-shadow: 0px 0px 2px ${({ theme }) => theme.blank};
+    opacity: 1;
   }
 `

@@ -2,7 +2,10 @@ export const light = () => ({
 });
 
 export const dark = () => ({
+  accent_color: '#0C7C59',
+  offset_secondary_color: '#0E2019',
   text_color: '#FFFFFF',
+  inverted_text_color: '#000000',
   background_color: '#08120E',
   card_color: '#0E2019',
   input_color: '#245939',

@@ -6,6 +6,6 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: ${ ({ theme }) => theme.white_green };
+  background-color: ${ ({ theme }) => theme.background_color };
   overflow: hidden;
 `;
