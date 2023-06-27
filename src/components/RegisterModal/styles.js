@@ -21,7 +21,8 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.background_color};
   max-width: 507px;
   border-radius: 46px;
-  box-shadow: ${(props) => props.$active ? '-3.9037270545959473px 3.9037270545959473px 13.012423515319824px 0px #00000040' : 'none'};
+  /* box-shadow: ${(props) => props.$active ? '-3.9037270545959473px 3.9037270545959473px 13.012423515319824px 0px #00000040' : 'none'}; */
+  box-shadow: ${(props) => props.$active ? `0px 0px 13px 0px ${props.theme.accent_color}` : 'none'};
   transform: scale(.85);
   animation: ${appearFromBottom(.85)} 1s;
   transition: all .3s ease-in-out;
