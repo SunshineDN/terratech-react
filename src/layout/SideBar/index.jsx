@@ -1,4 +1,4 @@
-import { Container, NavBar, NavIcon, NavText, NavItem, User } from './styles.js';
+import { Container, NavBar, NavIcon, NavText, NavItem, User, LogOut } from './styles.js';
 import UserImg from '../../assets/user.png';
 import Collect from '../../assets/icons/Collect.svg';
 import Coupons from '../../assets/icons/Coupons.svg';
@@ -38,6 +38,10 @@ export const SideBar = () => {
         <NavItem to={ '/support' }>
           <NavIcon icon={ Help }/>
           <NavText>Ajuda</NavText>
+        </NavItem>
+        <NavItem to={ '/login' }>
+          <LogOut />
+          <NavText>Deslogar</NavText>
         </NavItem>
       </NavBar>
     </Container>

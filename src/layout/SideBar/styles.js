@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import { BiLogOut } from 'react-icons/bi';
 
 export const Container = styled.nav`
   width: 100%;
@@ -51,6 +52,12 @@ export const NavIcon = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+`;
+
+export const LogOut = styled(BiLogOut)`
+  width: 30px;
+  height: 100%;
+  color: ${({ theme }) => theme.text_color};
 `;
 
 export const NavText = styled.span`
