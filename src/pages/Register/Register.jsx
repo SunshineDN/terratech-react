@@ -6,7 +6,7 @@ const Register = () => {
   return (
     <Container>
       <RegisterModal/>
-      <SectionOffset/>
+      <SectionOffset position={'right'}/>
     </Container>
   );
 };

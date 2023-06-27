@@ -1,6 +1,13 @@
+import LoginModal from "../../components/LoginModal";
+import SectionOffset from "../../components/SectionOffset";
+import { Container } from "./styles";
+
 const Login = () => {
   return (
-    <div>Login</div>
+    <Container>
+      <LoginModal />
+      <SectionOffset position={"left"} />
+    </Container>
   );
 };
 

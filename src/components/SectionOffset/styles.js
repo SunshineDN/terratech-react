@@ -11,6 +11,17 @@ const appearFromRight = keyframes`
   }
 `;
 
+const appearFromLeft = keyframes`
+  from {
+    /* opacity: 0; */
+    left: -500px;
+  }
+  to {
+    /* opacity: 1; */
+    left: 0;
+  }
+`;
+
 const upAndDown = keyframes`
   0% {
     transform: translateY(0);
@@ -30,7 +41,7 @@ export const Container = styled.div`
   position: relative;
 `
 
-export const FirstRectangle = styled.div`
+export const FirstRectangleRight = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
@@ -42,7 +53,7 @@ export const FirstRectangle = styled.div`
   animation: ${appearFromRight} 2s;
 `
 
-export const SecondRectangle = styled.div`
+export const SecondRectangleRight = styled.div`
   width: 96%;
   height: 100%;
   position: absolute;
@@ -57,6 +68,60 @@ export const SecondRectangle = styled.div`
   align-items: center;
   justify-content: center;
   animation: ${appearFromRight} 2.5s;
+
+  & > svg {
+    width: 55%;
+    height: 100%;
+  }
+
+  & #umbu {
+    animation: ${upAndDown} 2s infinite ease-in-out;
+  }
+
+  & #caja {
+    animation: ${upAndDown} 2s -1.5s infinite ease-in-out;
+  }
+
+  & #goiaba {
+    animation: ${upAndDown} 3.5s 1s infinite ease-in-out;
+  }
+
+  & #aucerola {
+    animation: ${upAndDown} 3.5s 2s infinite ease-in-out;
+  }
+
+  & #folha_mid {
+    animation: ${upAndDown} 5s 1s infinite ease-in-out;
+  }
+`
+
+export const FirstRectangleLeft = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: ${({ theme }) => theme.offset_secondary_color};
+  border-radius: 0 400px 400px 0;
+  animation: ${appearFromLeft} 2s;
+`
+
+export const SecondRectangleLeft = styled.div`
+  width: 96%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: ${({ theme }) => theme.accent_color};
+  box-shadow: -3px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 0 400px 400px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: ${appearFromLeft} 2.5s;
 
   & > svg {
     width: 55%;

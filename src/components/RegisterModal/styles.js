@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { Link } from "react-router-dom";
 import GoogleIcon from '../../assets/icons/google_icon.svg'
 
 const appearFromBottom = (x) => keyframes`
@@ -174,7 +175,7 @@ export const PolicyText = styled.p`
   text-align: center;
 `
 
-export const Link = styled.a`
+export const LinkText = styled(Link)`
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 600;
